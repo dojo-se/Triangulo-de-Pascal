@@ -1,9 +1,11 @@
 import unittest2 as unittest
 
-def triangulo_de_pascal(parametro):
-    if parametro == 1:
+def _cria_matriz_do_triangulo(altura):
+   [[0 for x in range(altura)] for x in range(altura)]
+def triangulo_de_pascal(altura):
+    if altura == 1:
        r = '1'
-    elif parametro == 2:
+    elif altura == 2:
        r = ' 1\n1 1'
     return r
 
