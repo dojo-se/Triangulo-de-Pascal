@@ -2,10 +2,12 @@ import unittest2 as unittest
 
 def _cria_matriz_do_triangulo(altura):
    dimensoes = range(altura)
-   return [[1 for x in dimensoes] for x in dimensoes]
+   base = range((2 * altura) - 1)
+   return [[0 for x in base] for x in dimensoes]
    
 def _formata_matriz_do_triangulo(matriz):
-   return str(matriz[0][0])
+    matriz[0][0] = 1
+    return str(matriz[0][0])
 
 def triangulo_de_pascal(altura):
     if altura == 1:
